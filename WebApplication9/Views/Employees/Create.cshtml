@@ -1,0 +1,129 @@
+﻿
+@using TwitterBootstrap3
+@using TwitterBootstrapMVC
+@model WebApplication9.Employee
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+       <div class="container">
+    <div class="row">
+
+        <div class="col-md-5" style="background-color:aquamarine;">
+            <button class="btn btn-default">x</button>
+            Customer Admin Services & Enquiries (CASE) - Production
+        </div>
+        <div class="col-md-2" style="background-color:blueviolet;">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Dropdown Example
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2" style="background-color:aliceblue;">
+
+            <h5>version</h5>
+
+        </div>
+        <div class="col-md-3 " style=" background-color:burlywood;">
+            <div class="btn-group pull-right">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                    Menu
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Choice1</a></li>
+                    <li><a href="#">Choice2</a></li>
+                    <li><a href="#">Choice3</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Choice..</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-2" style="background-color:royalblue;height: 800px">
+
+            <div class="row">
+                <div class="btn-toolbar">
+                    <div class="btn-group">
+                        <button class="btn btn-default">x</button>
+                        <button class="btn btn-default">y</button>
+                        <button class="btn btn-default">x</button>
+                        <button class="btn btn-default">y</button>
+                        <button class="btn btn-default">x</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+               @using (var a = Html.Bootstrap().Begin(new Accordion("myAccordion")))
+               {
+                   using (a.BeginPanel("Title 1"))
+                   {
+                    <p>This is the contents of first panel</p>
+                   }
+                   using (a.BeginPanel("Title 2"))
+                   {
+                    <p>This is the contents of second panel</p>
+                   }
+                   using (a.BeginPanel("Title 3"))
+                   {
+                    <p>This is the contents of first panel</p>
+                   }
+                   using (a.BeginPanel("Title 4"))
+                   {
+                    <p>This is the contents of second panel</p>
+                   }
+               }
+            </div>
+        </div>
+        <div class="col-md-10" style="background-color:gray;height: 800px">
+            <div class="row" style=" background-color:red;">
+                <div class="row"></div><div class="col-md-12"><ol class="breadcrumb"><li><a href="#">Home</a></li><li class="active">Customers</li></ol></div>
+            </div>
+            <div class="row"><h1>virendra</h1></div>
+            <div class="row">
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                </div>
+            </div>
+            
+            <div class="row">
+                @using (var f = Html.Bootstrap().Begin(new Form()))
+                {
+                    @f.FormGroup().TextBoxFor(x => x.ID).Placeholder("Enter email")
+                    @f.FormGroup().PasswordFor(x => x.Name).Placeholder()
+
+                    @Html.Bootstrap().SubmitButton()
+                }
+            </div>
+              
+            </div>
+    </div>
+</div>
+
+    
+    
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
